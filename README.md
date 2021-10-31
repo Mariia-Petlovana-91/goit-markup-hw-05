@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-HW5-GOIT-позиціонування
+# -goit-markup-hw-02.
+GoIt-HomeWork2-HTML+CSS
