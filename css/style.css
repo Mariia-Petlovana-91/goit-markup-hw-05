@@ -13,7 +13,7 @@
   --color-text: #ffffff;
   --border-color: #ececec;
   --background-color: #f5f4fa;
-  --transition-duration: 200ms;
+  --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
@@ -126,6 +126,10 @@ address {
   text-transform: capitalize;
   margin-right: 50px;
   position: relative;
+}
+.studio,
+.portfolio,
+.contacty {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .navigation-item:last-child {
@@ -163,6 +167,9 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   margin-right: 50px;
+}
+.mail,
+.tel {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .header-contacts-item:last-child {
@@ -225,12 +232,11 @@ address {
   background-color: var(--hover-focus-color-others);
   color: var(--color-text);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: bacground-color var(--transition-timing-function)
+  transition: bacground-color var(--transition-duration)
     var(--transition-timing-function);
 }
 .btn-hero:hover,
 .btn-hero:focus {
-  color: var(--color-text);
   background-color: #188ce8;
 }
 /*---------------------------main page section 2 features----------------------*/
@@ -423,12 +429,11 @@ address {
   font-size: 14px;
   line-height: 1.71em;
   letter-spacing: 0.03em;
-  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .google-address {
-  font-size: 14px;
-  line-height: 1.71em;
-  letter-spacing: 0.03em;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+.vault-contact {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .vault-item > a.link.google-address {
@@ -482,6 +487,62 @@ address {
   fill: #ffffff;
   padding: 12px;
 }
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opasity var(--transition-duration)
+    var(--transition-timing-function);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+/* .backdrop.is-hidden.modalwindow {
+  transform: rotate(180deg);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
+} */
+.modalwindow {
+  width: 528px;
+  min-height: 550px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+}
+.modalwindow-btn-close {
+  width: 30px;
+  height: 30px;
+  border-color: #00000010;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: border-color var(--transition-duration)
+      var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
+}
+.modalwindow-btn-close:hover,
+.modalwindow-btn-close:focus {
+  border-color: var(--hover-focus-color-others);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 /*-----------------------------portfolio section 1 button----------------------------*/
 .btn-list {
   display: flex;
