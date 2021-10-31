@@ -613,7 +613,8 @@ address {
   transition: transform var(--transition-duration)
     var(--transition-timing-function);
 }
-.item-project:hover .project-bloc-text-overflow {
+.item-project:hover .project-bloc-text-overflow,
+.item-project:focus .project-bloc-text-overflow {
   transform: translateY(0);
 }
 .links-project {
