@@ -290,7 +290,24 @@ address {
 .item-what-we-do:nth-child(3n + 3) {
   margin-right: 0px;
 }
-
+.what-we-do-blok {
+  position: relative;
+}
+.what-we-do-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%;
+  min-height: 70px;
+  background-color: #2f303a80;
+  position: absolute;
+  top: 224px;
+}
 /*-------------------main page section 4 oue team---------------------------*/
 .our-team {
   background-color: var(--background-color);
@@ -487,6 +504,7 @@ address {
   fill: #ffffff;
   padding: 12px;
 }
+/* ---------modal window----------------- */
 .backdrop {
   width: 100vw;
   height: 100vh;
